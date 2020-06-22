@@ -2,8 +2,8 @@
 
 ## Exercise I
 
-a) O(log n)
-This is because the value of a increases exponentially but the runtime increases marginally. The rate of increase of the runtime is slower than the rate of increase of the value of a.
+a) O(n)
+
 
 b) O(n log n)
 The runtime for increases slightly faster than the rate of increase in n. The "for loop" code part has a O(n), and the "while loop" has O(log n). Combination of which givesus the linearithmetric runtime of O(n log n).
@@ -15,8 +15,10 @@ while j < n:
 j \*= 2 # O(log n)
 sum += 1
 
-c) O(2^n) - Exponential
+c) O(n) 
 
-The runtime increases at a much faster rate than the increase in n.
 
 ## Exercise II
+The first pass approach will be to keep increasing the floor count until we find out the first where eggs get broken. This will lead to waste of eggs as many eggs will have to be smashed. 
+
+On the other hand, we can use the concept of a binary tree. This means we can have a target floor. The values to the right of the tree will be denoted by the floor that are above our target floor. The values to the left will be the values below our target floor. This way, we can minimize the number of eggs that will be smashed.
